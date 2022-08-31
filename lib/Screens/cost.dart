@@ -87,7 +87,8 @@ class _CostState extends State<Cost> {
           current_hour_cost =
               ((data['current_hour_energy'] / 1000) * 1.9 + 25).toString();
           thirty_day_cost =
-              ((data['thirty_day_energy'] / 1000) * 1.9 + 25).toString();
+              ((data['current_hour_energy'] * 30 * 24 / 1000) * 1.9 + 25)
+                  .toString();
         });
       });
     });
